@@ -275,6 +275,11 @@ SL_CustomPrefs.Get = function()
 			Choices = range(5, 15, 1),
 			Values  = range(5, 15, 1)
 		},
+		CasualTimingScale = {
+			Default = 1.0,
+			Choices = { "1.0", "1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7", "1.8", "1.9", "2.0" },
+			Values  = { 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0 }
+		},
 		-- - - - - - - - - - - - - - - - - - - -
 		-- SM5.1's ImageCache System (used in CasualMode)
 		UseImageCache = {

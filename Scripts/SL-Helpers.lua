@@ -53,6 +53,9 @@ end
 GetTimingWindow = function(n, mode)
 	local prefs = SL.Preferences[mode or SL.Global.GameMode]
 	local scale = PREFSMAN:GetPreference("TimingWindowScale")
+	if (mode == "Casual" or SL.Global.GameMode == "Casual") then
+		scale = scale * (ThemePrefs.Get("CasualTimingScale") or 1)
+	end
 	return prefs["TimingWindowSecondsW"..n] * scale + prefs.TimingWindowAdd
 end
 
